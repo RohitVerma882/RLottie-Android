@@ -1,2 +1,2 @@
-# RLottie-Android-
+# RLottie-Android
 rLottie animation player for Android
