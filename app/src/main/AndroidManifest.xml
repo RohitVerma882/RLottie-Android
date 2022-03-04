@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    package="com.itsrohit.rlottiesample">
+    
+	<application 
+		android:allowBackup="false"
+        android:fullBackupOnly="false"
+		android:name="com.itsrohit.rlottiesample.RLottieApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:largeHeap="true"
+        android:resizeableActivity="true"
+        android:usesCleartextTraffic="true" 
+		android:hardwareAccelerated="true" 
+        android:theme="@style/AppTheme"
+		tools:replace="android:supportsRtl">
+		
+		<activity android:name="com.itsrohit.rlottiesample.ui.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" 
+            android:hardwareAccelerated="true" 
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>
