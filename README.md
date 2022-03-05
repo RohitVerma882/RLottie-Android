@@ -34,6 +34,28 @@ Add to application or activity
 Rlottie.init(this);
 ```
 
+Add to activity layout
+```xml
+<com.itsrohit.rlottie.RLottieImageView
+     android:id="@+id/lottieImageView"
+	 android:layout_width="90dp"
+	 android:layout_height="90dp"/>
+```
+
+Add to activity class
+```java
+RLottieImageView lottieImageView = findViewById(R.id.lottieImageView);
+    lottieImageView.post(new Runnable() {
+		@Override
+			public void run() {
+				lottieImageView.setAutoRepeat(true);
+				lottieImageView.setAnimation(R.raw.loader_desygner, 90, 90);
+				// lottieImageView.setLayerColor("Shape Layer 1.**", Color.parseColor("#FF7043"));
+				lottieImageView.playAnimation();
+			}
+		});
+```
+
 ## Developer
 
 Developed by ```Rohit Verma```
