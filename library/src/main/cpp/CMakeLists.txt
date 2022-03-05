@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6.0)
 
 project(rlottie)
 
-set(CMAKE_SYSROOT /data/data/com.termux/files/home/ndk-r21e-sysroot/sysroot)
+#set(CMAKE_SYSROOT /data/data/com.termux/files/home/ndk-r21e-sysroot/sysroot)
 
 set(CMAKE_CXX_FLAGS "-std=c++14 -DANDROID -g")
 set(CMAKE_C_FLAGS "-w -std=c11 -DANDROID -g")
