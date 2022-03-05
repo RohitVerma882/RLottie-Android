@@ -29,7 +29,7 @@ dependencies {
 
 ## Usage
 
-Lottie#init :- Add to application or activity onCreate
+Add to application or activity
 ```java
 Rlottie.init(this);
 ```
@@ -44,3 +44,7 @@ Developed by ```Rohit Verma```
 + [Telegram](https://github.com/DrKLO/Telegram)
 + [rlottie](https://github.com/Samsung/rlottie)
 + [loader_desygner](https://lottiefiles.com/93759-loader-desygner) and [top_badge](https://lottiefiles.com/96489-top-badge-animation) animation from [LottieFiles](https://lottiefiles.com)
+
+## License
+
+[Apache 2.0](./LICENSE)
