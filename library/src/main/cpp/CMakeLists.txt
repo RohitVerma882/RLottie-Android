@@ -1,11 +1,11 @@
-cmake_minimum_required(VERSION 3.10.2)
+cmake_minimum_required(VERSION 3.6.0)
 
 project(rlottie)
 
 set(CMAKE_SYSROOT /data/data/com.termux/files/home/ndk-r21e-sysroot/sysroot)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11")
+set(CMAKE_CXX_FLAGS "-std=c++14 -DANDROID -g")
+set(CMAKE_C_FLAGS "-w -std=c11 -DANDROID -g")
 set(CMAKE_ASM_FLAGS "${CFLAGS} -x assembler-with-cpp")
 
 if (${ANDROID_ABI} STREQUAL "armeabi-v7a" OR ${ANDROID_ABI} STREQUAL "arm64-v8a")
@@ -59,8 +59,7 @@ add_library(rlottielib STATIC
         rlottie/src/vector/vraster.cpp
         rlottie/src/vector/vrect.cpp
         rlottie/src/vector/vrle.cpp)
-target_compile_options(rlottielib PUBLIC 
-    -Wall -fno-rtti -finline-functions -ffast-math -Os -fno-unwind-tables -fno-asynchronous-unwind-tables -Wnon-virtual-dtor -Woverloaded-virtual -Wno-unused-parameter -fvisibility=hidden)
+target_compile_options(rlottielib PUBLIC -Wall -fno-rtti -finline-functions -ffast-math -Os -fno-unwind-tables -fno-asynchronous-unwind-tables -Wnon-virtual-dtor -Woverloaded-virtual -Wno-unused-parameter -fvisibility=hidden)
 set_target_properties(rlottielib PROPERTIES ANDROID_ARM_MODE arm)
 target_compile_definitions(rlottielib PUBLIC HAVE_PTHREAD NDEBUG)
 target_include_directories(rlottielib PUBLIC
@@ -85,8 +84,7 @@ endif()
 #rlottie
 #
 add_library(rlottie SHARED lottie.cpp)
-target_compile_options(rlottie PUBLIC 
-    -ffast-math -Os -funroll-loops -ffast-math -fno-strict-aliasing -fno-math-errno)
+target_compile_options(rlottie PUBLIC -ffast-math -Os -funroll-loops -ffast-math -fno-strict-aliasing -fno-math-errno)
 
 if (${ANDROID_ABI} STREQUAL "armeabi-v7a")
     set_target_properties(rlottie PROPERTIES
