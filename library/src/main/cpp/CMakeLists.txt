@@ -87,24 +87,12 @@ add_library(rlottie SHARED lottie.cpp)
 target_compile_options(rlottie PUBLIC -ffast-math -Os -funroll-loops -ffast-math -fno-strict-aliasing -fno-math-errno)
 
 if (${ANDROID_ABI} STREQUAL "armeabi-v7a")
-    set_target_properties(rlottie PROPERTIES
-            ANDROID_ARM_NEON FALSE
-            ANDROID_ARM_MODE arm)
-    target_compile_definitions(rlottie PUBLIC
-            ANDROID_ARM_NEON=false)
+    set_target_properties(rlottie PROPERTIES ANDROID_ARM_NEON FALSE ANDROID_ARM_MODE arm)
+    target_compile_definitions(rlottie PUBLIC ANDROID_ARM_NEON=false)
 else()
-    set_target_properties(rlottie PROPERTIES
-            ANDROID_ARM_NEON FALSE
-            ANDROID_ARM_MODE arm)
+    set_target_properties(rlottie PROPERTIES ANDROID_ARM_NEON FALSE ANDROID_ARM_MODE arm)
 endif()
 
-target_include_directories(rlottie PUBLIC 
-    lz4 
-    rlottie/inc)
+target_include_directories(rlottie PUBLIC lz4 rlottie/inc)
 
-target_link_libraries(rlottie
-    lz4 
-    rlottielib 
-    jnigraphics 
-    c++_static 
-    log)
+target_link_libraries(rlottie lz4 rlottielib jnigraphics c++_static log)
