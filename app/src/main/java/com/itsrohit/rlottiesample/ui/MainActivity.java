@@ -17,6 +17,7 @@ import com.itsrohit.rlottie.RLottie;
 public class MainActivity extends AppCompatActivity {
 
 	private RLottieImageView lottieImageView;
+	private RLottieImageView lottieImageView2;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
 					loadLottieAnim();
 				}
 			});
+			
+		lottieImageView2 = findViewById(R.id.lottieImageView2);
+		lottieImageView2.post(new Runnable() {
+				@Override
+				public void run() {
+					loadLottieAnim2();
+				}
+			});
     }
 	
 	private void loadLottieAnim() {
@@ -37,5 +46,11 @@ public class MainActivity extends AppCompatActivity {
 		lottieImageView.setAnimation(R.raw.loader_desygner, 90, 90);
 		lottieImageView.setLayerColor("Shape Layer 1.**", Color.parseColor("#FF7043"));
 		lottieImageView.playAnimation();
+	}
+	
+	private void loadLottieAnim2() {
+		lottieImageView2.setAutoRepeat(true);
+		lottieImageView2.setAnimation(R.raw.top_badge, 90, 90);
+		lottieImageView2.playAnimation();
 	}
 }
