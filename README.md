@@ -31,7 +31,7 @@ dependencies {
 
 Add to application or activity
 ```java
-Rlottie.init(this);
+RLottie.init(this);
 ```
 
 Add to activity layout

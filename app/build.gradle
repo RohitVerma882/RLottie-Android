@@ -23,7 +23,6 @@ android {
 
     lintOptions {
         checkReleaseBuilds false
-        abortOnError false
     }
 
     compileOptions {
@@ -36,8 +35,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation "androidx.constraintlayout:constraintlayout:2.1.2"
-
+    
     implementation 'cat.ereza:customactivityoncrash:2.3.0'
+	// implementation 'com.github.RohitVermaOP:RLottie-Android:1.0.1'
 	implementation project(':library')
 }
