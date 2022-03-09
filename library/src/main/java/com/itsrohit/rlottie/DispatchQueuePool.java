@@ -46,7 +46,7 @@ public class DispatchQueuePool {
 
     public DispatchQueuePool(int count) {
         maxCount = count;
-        guid = RLottie.getRandom().nextInt();
+        guid = RLottie.random.nextInt();
     }
 
     @UiThread
@@ -55,7 +55,7 @@ public class DispatchQueuePool {
         if (!busyQueues.isEmpty() && (totalTasksCount / 2 <= busyQueues.size() || queues.isEmpty() && createdCount >= maxCount)) {
             queue = busyQueues.remove(0);
         } else if (queues.isEmpty()) {
-            queue = new DispatchQueue("DispatchQueuePool" + guid + "_" + RLottie.getRandom().nextInt());
+            queue = new DispatchQueue("DispatchQueuePool" + guid + "_" + RLottie.random.nextInt());
             queue.setPriority(Thread.MAX_PRIORITY);
             createdCount++;
         } else {

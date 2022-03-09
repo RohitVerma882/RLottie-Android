@@ -17,14 +17,14 @@ public class RLottie {
     private final static String LIB_NAME = "rlottie";
 	private static boolean libLoaded = false;
 
-	private static volatile Context context;
-	private static volatile Handler handler;
+	protected static volatile Context context;
+	protected static volatile Handler handler;
 
-	private static float density = 1;
-    private static float screenRefreshRate = 60;
+	protected static float density = 1;
+    protected static float screenRefreshRate = 60;
 	
-	private static SecureRandom random = new SecureRandom();
-	private static volatile DispatchQueue queue = new DispatchQueue("rlottieQueue");
+	protected static SecureRandom random = new SecureRandom();
+	protected static volatile DispatchQueue queue = new DispatchQueue("rlottieQueue");
 	
 	static {
         try {
@@ -62,30 +62,6 @@ public class RLottie {
 				screenRefreshRate = display.getRefreshRate();
 			}
 		}
-    }
-
-	protected static @NonNull Context getContext() {
-		return context;
-	}
-
-	protected static @NonNull Handler getHandler() {
-		return handler;
-	}
-
-	protected static DispatchQueue getQueue() {
-		return queue;
-	}
-
-	protected static SecureRandom getRandom() {
-		return random;
-	}
-
-	protected static float getDensity() {
-        return density;
-    }
-
-	protected static float getScreenRefreshRate() {
-        return screenRefreshRate;
     }
 
 	protected static int toPx(float value) {

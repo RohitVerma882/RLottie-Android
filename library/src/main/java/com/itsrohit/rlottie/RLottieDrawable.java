@@ -417,7 +417,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         }
 		
         loadingInBackground = true;
-        RLottie.getQueue().postRunnable(new Runnable() {
+        RLottie.queue.postRunnable(new Runnable() {
 				@Override
 				public void run() {
 					nativePtr = createWithJson(jsonString, "dice", metaData, null);
@@ -462,7 +462,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         }
 		
         secondLoadingInBackground = true;
-        RLottie.getQueue().postRunnable(new Runnable() {
+        RLottie.queue.postRunnable(new Runnable() {
 				@Override
 				public void run() {
 					if (destroyAfterLoading) {
@@ -532,7 +532,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
             if (path != null) {
                 inputStream = new FileInputStream(path);
             } else {
-                inputStream = RLottie.getContext().getResources().openRawResource(rawRes);
+                inputStream = RLottie.context.getResources().openRawResource(rawRes);
             }
 			
             int readLen;
@@ -972,7 +972,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
 		
         singleFrameDecoded = true;
         waitingForNextTask = false;
-        if (RLottie.getScreenRefreshRate() <= 60) {
+        if (RLottie.screenRefreshRate <= 60) {
             lastFrameTime = now;
         } else {
             lastFrameTime = now - Math.min(16, timeDiff - timeCheck);
@@ -1031,7 +1031,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         long now = SystemClock.elapsedRealtime();
         long timeDiff = Math.abs(now - lastFrameTime);
         int timeCheck;
-        if (RLottie.getScreenRefreshRate() <= 60) {
+        if (RLottie.screenRefreshRate <= 60) {
             timeCheck = timeBetweenFrames - 6;
         } else {
             timeCheck = timeBetweenFrames;
