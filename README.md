@@ -36,7 +36,7 @@ RLottie.init(this);
 
 Add to activity layout
 ```xml
-<com.itsrohit.rlottie.RLottieImageView
+<com.rohitop.rlottie.RLottieImageView
      android:id="@+id/lottieImageView"
      android:layout_width="90dp"
      android:layout_height="90dp"/>

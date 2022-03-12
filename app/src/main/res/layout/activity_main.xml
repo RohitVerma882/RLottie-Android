@@ -6,12 +6,12 @@
 	android:gravity="center"
 	android:background="@android:color/white">
 
-	<com.itsrohit.rlottie.RLottieImageView
+	<com.rohitop.rlottie.RLottieImageView
 		android:id="@+id/lottieImageView"
 		android:layout_width="90dp"
 		android:layout_height="90dp"/>
 	
-	<com.itsrohit.rlottie.RLottieImageView
+	<com.rohitop.rlottie.RLottieImageView
 		android:id="@+id/lottieImageView2"
 		android:layout_width="90dp"
 		android:layout_height="90dp"
