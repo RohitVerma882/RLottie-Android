@@ -1,2 +1,2 @@
-rootProject.name = 'RLottie-Android'
+rootProject.name = 'rlottie-android'
 include('app', 'library')
