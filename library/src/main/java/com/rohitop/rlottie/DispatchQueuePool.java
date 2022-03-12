@@ -1,4 +1,4 @@
-package com.itsrohit.rlottie;
+package com.rohitop.rlottie;
 
 import android.os.SystemClock;
 import android.util.SparseIntArray;

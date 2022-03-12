@@ -1,4 +1,4 @@
-package com.itsrohit.rlottie;
+package com.rohitop.rlottie;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

@@ -1,4 +1,4 @@
-package com.itsrohit.rlottie;
+package com.rohitop.rlottie;
 
 import android.content.Context;
 import android.os.Handler;
@@ -38,10 +38,6 @@ public class RLottie {
     }
 
 	public static void init(@NonNull Context context) {
-		RLottie.context = context.getApplicationContext();
-		RLottie.handler = new Handler(context.getMainLooper());
-		reloadConfiguration(context);
-
 		synchronized (RLottie.class) {
 			if (libLoaded) {
 				return;
@@ -50,9 +46,13 @@ public class RLottie {
 			System.loadLibrary(LIB_NAME);
 			libLoaded = true;
 		}
+		
+		RLottie.context = context.getApplicationContext();
+		RLottie.handler = new Handler(context.getMainLooper());
+		reloadConfiguration(context);
 	}
 
-	private static void reloadConfiguration(@NonNull Context context) {
+	public static void reloadConfiguration(@NonNull Context context) {
         density = context.getResources().getDisplayMetrics().density;
 
 		WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -68,7 +68,6 @@ public class RLottie {
         if (value == 0) {
             return 0;
         }
-
         return (int) Math.ceil(density * value);
     }
 

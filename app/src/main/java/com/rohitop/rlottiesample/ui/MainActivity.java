@@ -1,4 +1,4 @@
-package com.itsrohit.rlottiesample.ui;
+package com.rohitop.rlottiesample.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,11 +8,11 @@ import android.graphics.Color;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.itsrohit.rlottiesample.R;
+import com.rohitop.rlottiesample.R;
 
-import com.itsrohit.rlottie.RLottieImageView;
-import com.itsrohit.rlottie.RLottieDrawable;
-import com.itsrohit.rlottie.RLottie;
+import com.rohitop.rlottie.RLottieImageView;
+import com.rohitop.rlottie.RLottieDrawable;
+import com.rohitop.rlottie.RLottie;
 
 public class MainActivity extends AppCompatActivity {
 

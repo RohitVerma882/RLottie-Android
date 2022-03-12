@@ -7,7 +7,7 @@ android {
     buildToolsVersion "31.0.0"
 
     defaultConfig {
-        applicationId "com.itsrohit.rlottiesample"
+        applicationId "com.rohitop.rlottiesample"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1

@@ -1,4 +1,4 @@
-package com.itsrohit.rlottie;
+package com.rohitop.rlottie;
 
 import android.content.Context;
 import android.widget.ImageView;
@@ -63,7 +63,6 @@ public class RLottieImageView extends ImageView {
         if (autoRepeat) {
             drawable.setAutoRepeat(1);
         }
-		
         if (layerColors != null) {
             drawable.beginApplyLayerColors();
             for (HashMap.Entry<String, Integer> entry : layerColors.entrySet()) {

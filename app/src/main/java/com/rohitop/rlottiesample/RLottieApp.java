@@ -1,10 +1,10 @@
-package com.itsrohit.rlottiesample;
+package com.rohitop.rlottiesample;
 
 import android.app.Application;
 
 import cat.ereza.customactivityoncrash.config.CaocConfig;
 
-import com.itsrohit.rlottie.RLottie;
+import com.rohitop.rlottie.RLottie;
 
 public class RLottieApp extends Application {
 
