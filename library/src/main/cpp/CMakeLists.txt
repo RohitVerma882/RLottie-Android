@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.10.2)
 
 project(rlottie)
 
-#set(CMAKE_SYSROOT /data/data/com.termux/files/home/ndk-r21e-sysroot/sysroot)
-
 set(CMAKE_CXX_FLAGS "-std=c++14 -DANDROID -g")
 set(CMAKE_C_FLAGS "-w -std=c11 -DANDROID -g")
 set(CMAKE_ASM_FLAGS "${CFLAGS} -x assembler-with-cpp")
@@ -15,7 +13,7 @@ else()
 endif()
 
 #
-#lz4
+# lz4
 #
 add_library(lz4 STATIC
         lz4/lz4.c
@@ -25,7 +23,7 @@ target_compile_options(lz4 PUBLIC -w -O3)
 set_target_properties(lz4 PROPERTIES ANDROID_ARM_MODE arm)
         
 #
-#rlottielib
+# rlottielib
 #
 add_library(rlottielib STATIC
         rlottie/src/lottie/lottieanimation.cpp
@@ -81,7 +79,7 @@ elseif(${ANDROID_ABI} STREQUAL "arm64-v8a")
 endif()
         
 #
-#rlottie
+# rlottie
 #
 add_library(rlottie SHARED lottie.cpp)
 target_compile_options(rlottie PUBLIC -ffast-math -Os -funroll-loops -ffast-math -fno-strict-aliasing -fno-math-errno)
