@@ -11,7 +11,7 @@ Lottie animation player for Android
 
 ## Download 
 
-Add to project's build.gradle
+#### Add to project's build.gradle
 ```gradle
 allprojects {
 	repositories {
@@ -20,7 +20,7 @@ allprojects {
 }
 ```
 
-Add to module-level build.gradle
+#### Add to module-level build.gradle
 ```gradle
 dependencies { 
     implementation 'com.github.RohitVermaOP:RLottie-Android:<latest-version>'
@@ -29,12 +29,12 @@ dependencies {
 
 ## Usage
 
-Add to application or activity
+#### Add to application or activity
 ```java
 RLottie.init(this);
 ```
 
-Add to activity layout
+#### Add to activity layout
 ```xml
 <com.rohitop.rlottie.RLottieImageView
      android:id="@+id/lottieImageView"
@@ -42,7 +42,7 @@ Add to activity layout
      android:layout_height="90dp"/>
 ```
 
-Add to activity class
+#### Add to activity class
 ```java
 RLottieImageView lottieImageView = findViewById(R.id.lottieImageView);
 lottieImageView.post(new Runnable() {
@@ -58,11 +58,11 @@ lottieImageView.post(new Runnable() {
 
 ## Developer
 
-Developed by ```Rohit Verma```
+#### Developed by ```Rohit Verma```
 + [Instagram](http://instagram.com/mr_rohitverma88)
 + [Telegram](http://t.me/RohitVerma88)
 
-## Special Thanks
+## Reference
 + [Telegram](https://github.com/DrKLO/Telegram)
 + [rlottie](https://github.com/Samsung/rlottie)
 + [loader_desygner](https://lottiefiles.com/93759-loader-desygner) and [top_badge](https://lottiefiles.com/96489-top-badge-animation) animation from [LottieFiles](https://lottiefiles.com)
