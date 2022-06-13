@@ -1,5 +1,5 @@
 # RLottie-Android
-[![](https://img.shields.io/badge/Minimum%20Sdk-21-2196F3)](https://github.com/RohitVermaOP/StackBlur)
+[![](https://img.shields.io/badge/Minimum%20Sdk-21-2196F3)](https://github.com/RohitVermaOP/RLottie-Android)
 [![](https://jitpack.io/v/RohitVermaOP/RLottie-Android.svg)](https://jitpack.io/#RohitVermaOP/RLottie-Android)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 
